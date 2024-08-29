@@ -10,6 +10,28 @@
     }
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Estilo global */
 body {
     font-family: 'Calibri Light', Calibri, Arial, sans-serif;
@@ -40,7 +62,6 @@ header {
     color: white;
     margin: 0;
     animation: fadeIn 2s ease-in-out;
-    text-align: center;
 }
 
 /* Estilo da navegação */
@@ -202,7 +223,6 @@ section {
     width: 100%; /* Garante que a imagem ocupe toda a largura do slider */
 }
 
-
 /* Botões de navegação do slider */
 .slider-prev,
 .slider-next {
@@ -311,10 +331,12 @@ a:focus, button:focus {
     outline-offset: 2px;
 }
 
+/* Indicadores do slider */
 .slider-indicators {
     text-align: center;
     margin-top: 15px;
 }
+
 .slider-indicators span {
     display: inline-block;
     width: 10px;
@@ -324,11 +346,12 @@ a:focus, button:focus {
     border-radius: 50%;
     cursor: pointer;
 }
+
 .slider-indicators span.active {
     background-color: #f5b02b;
 }
 
-/* Adicionando animações específicas */
+/* Estilo para títulos de seções */
 .section-title {
     margin: 0;
     opacity: 0; /* Começa invisível para a animação */
@@ -336,30 +359,39 @@ a:focus, button:focus {
     animation: slideIn 1s forwards;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px); /* Ajusta para 2 colunas em telas menores */
+        max-width: calc(50% - 20px);
+    }
+
+    .slider-img {
+        height: 300px; /* Ajusta a altura do slider em telas menores */
+    }
+
+    /* Ajustes no modal */
+    .modal-content {
+        width: 90%;
+    }
+
+    .close {
+        font-size: 30px;
+        right: 15px;
     }
 }
 
-#about p {
-    opacity: 0; /* Começa invisível para a animação */
-    animation: fadeInUp 1s forwards;
-    animation-delay: 1s; /* Atraso para aparecer depois do título */
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Ajusta para 1 coluna em telas muito pequenas */
+        max-width: 100%;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .slider-img {
+        height: 200px; /* Ajusta a altura do slider em telas pequenas */
     }
 }
