@@ -37,7 +37,6 @@ body {
     font-family: 'Calibri Light', Calibri, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-transform: none;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -75,8 +74,6 @@ nav ul {
 }
 
 nav ul li {
-    display: flex;
-    align-items: center;
     position: relative;
 }
 
@@ -119,13 +116,13 @@ section {
 .footer-style {
     width: 100%;
     border: 2px solid white;
-    padding: 10px 0; /* Margem menor */
+    padding: 10px 0;
     background-color: #1c3c6f;
     color: white;
     text-align: center;
     font-size: 14px;
-    box-sizing: border-box; /* Garante que o padding não afete a largura total */
-    margin: 0; /* Remove qualquer margem que possa afetar a largura */
+    box-sizing: border-box;
+    margin: 0;
 }
 
 /* Estilo do container principal */
@@ -168,26 +165,26 @@ section {
 
 /* Estilo para cada item da galeria */
 .gallery-item {
-    flex: 1 1 calc(25% - 20px); /* Ajustado para 4 colunas */
-    max-width: calc(25% - 20px); /* Ajustado para 4 colunas */
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo dentro do item da galeria */
+    align-items: center;
 }
 
 /* Estilo para as imagens da galeria */
 .gallery-item img {
     width: 100%;
-    height: 150px; /* Altura reduzida para melhor visualização */
-    object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+    height: 150px;
+    object-fit: cover;
     border: 2px solid #ccc;
     border-radius: 10px;
     display: block;
     margin-bottom: 10px;
-    cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que é clicável */
+    cursor: pointer;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -205,10 +202,10 @@ section {
 /* Estilo para o slider de imagens */
 .slider-container {
     position: relative;
-    max-width: 800px; /* Reduz a largura máxima do slider */
+    max-width: 800px;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px; /* Adiciona bordas arredondadas ao container do slider */
+    border-radius: 10px;
 }
 
 .slider {
@@ -218,9 +215,9 @@ section {
 
 .slider-img {
     flex: 0 0 100%;
-    height: 500px; /* Ajuste conforme necessário */
-    object-fit: cover; /* Ajusta a imagem para cobrir o container */
-    width: 100%; /* Garante que a imagem ocupe toda a largura do slider */
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
 }
 
 /* Botões de navegação do slider */
@@ -228,7 +225,6 @@ section {
 .slider-next {
     position: absolute;
     top: 50%;
-    width: auto;
     padding: 10px;
     margin-top: -20px;
     color: white;
@@ -239,7 +235,7 @@ section {
     cursor: pointer;
     border-radius: 3px;
     user-select: none;
-    z-index: 1000; /* Garante que os botões estejam sobre o slider */
+    z-index: 1000;
 }
 
 .slider-prev {
@@ -264,8 +260,6 @@ section {
 .service-list {
     font-weight: lighter;
     columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
     column-gap: 30px;
     font-size: 18px;
     text-align: left;
@@ -282,7 +276,7 @@ section {
 
 /* Estilos para o modal */
 .modal {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -354,8 +348,8 @@ a:focus, button:focus {
 /* Estilo para títulos de seções */
 .section-title {
     margin: 0;
-    opacity: 0; /* Começa invisível para a animação */
-    transform: translateY(-20px); /* Começa deslocado para fora da tela */
+    opacity: 0;
+    transform: translateY(-20px);
     animation: slideIn 1s forwards;
 }
 
@@ -366,15 +360,14 @@ a:focus, button:focus {
     }
 
     .gallery-item {
-        flex: 1 1 calc(50% - 20px); /* Ajusta para 2 colunas em telas menores */
+        flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 
     .slider-img {
-        height: 300px; /* Ajusta a altura do slider em telas menores */
+        height: 300px;
     }
 
-    /* Ajustes no modal */
     .modal-content {
         width: 90%;
     }
@@ -387,11 +380,11 @@ a:focus, button:focus {
 
 @media (max-width: 480px) {
     .gallery-item {
-        flex: 1 1 100%; /* Ajusta para 1 coluna em telas muito pequenas */
+        flex: 1 1 100%;
         max-width: 100%;
     }
 
     .slider-img {
-        height: 200px; /* Ajusta a altura do slider em telas pequenas */
+        height: 200px;
     }
 }
