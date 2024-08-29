@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGM SERVICES USINAGEM E PRECISÃO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header, footer {
+            background-color: #1c3c6f;
+            color: white;
+        }
+        .section-title {
+            margin: 0;
+        }
+        .slider-container {
+            position: relative;
+        }
+        .slider-prev, .slider-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 0.5em;
+        }
+        .slider-prev {
+            left: 10px;
+        }
+        .slider-next {
+            right: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo">
+            </div>
+            <section id="tema">
+                <h1>AGM SERVICES USINAGEM E PRECISÃO</h1>
+            </section>
+            <nav>
+                <ul>
+                    <li><a href="#about">QUEM SOMOS</a></li>
+                    <li><a href="#services">SERVIÇOS</a></li>
+                    <li><a href="#maquinario">MAQUINÁRIO</a></li>
+                    <li><a href="#pecas">PEÇAS</a></li>
+                    <li><a href="#contact">CONTATO</a></li>                    
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about" class="fade-in">
+            <h2 class="section-title">QUEM SOMOS</h2>
+            <p>A AGM Services é uma empresa de usinagem de precisão com 10 anos de mercado. Destacamo-nos pela competência, qualidade, respeito, comprometimento dos funcionários e fidelidade de nossos clientes e fornecedores.</p>
+            <p>Especializados no fornecimento de peças complexas sob encomenda, seja a partir de desenhos ou amostras, estamos em uma trajetória de crescimento contínuo e visamos a liderança em nosso segmento.</p>
+            <p>Após um bem-sucedido processo de sucessão, a AGM é atualmente dirigida pelo Sr. Anderson Rodrigues Mendes, com o fundador, Sr. Adjalbas Garcia Mendes, atuando como conselheiro.</p>
+            <p>Contamos com o maior parque industrial de máquinas CNC do Rio de Janeiro e uma equipe de 70 funcionários sob a gestão do Sr. Anderson, que supervisiona as áreas de qualidade, produção, PCP, logística, comercial e financeiro.</p>
+            <div class="image-container">
+                <img src="assets/fábrica.png" alt="Fábrica" id="fabrica-logo" width="800" height="600">
+            </div>
+        </section>
+
+        <section id="services" class="fade-in">
+            <h2 class="section-title">SERVIÇOS</h2>
+            <ul class="service-list">
+                <li>Torneamento Convencional</li>
+                <li>Torneamento com Ferramenta Acionada</li>
+                <li>Fresamento em 2D e 3D</li>
+                <li>Furação em Furadeira Radial</li>
+                <li>Ajustagem</li>
+                <li>Eletroerosão à Fio</li>
+                <li>Eletroerosão por Penetração</li>
+                <li>Abertura de Roscas: Americana, Whitworth, Métrica, NPT, BSP, API, Buttres, ACME e outras</li>
+                <li>Corte com Serras de Coluna</li>
+                <li>Solda</li>
+                <li>Montagem e Manutenção de Equipamentos</li>
+                <li>Inspeção Dimensional e Tridimensional</li>
+                <li>END</li>
+            </ul>
+        </section>
+
+        <section id="maquinario" class="fade-in">
+            <h2 class="section-title">MAQUINÁRIO</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="assets/centur30d.png" alt="Torno CNC - Centur30 D" class="gallery-img">
+                    <p>Torno CNC - Centur30 D<br>Ø200 máx. (mm)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/galaxy30ht.png" alt="Torno CNC - Galaxy 30 HT" class="gallery-img">
+                    <p>Torno CNC - Galaxy 30 HT<br>Ø500 máx. (mm)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/GL240M.png" alt="Torno CNC - GL240M" class="gallery-img">
+                    <p>Torno CNC - GL240M<br>Ø240 máx. (mm)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/multiplic30S.png" alt="Torno CNC - Multiplic30S" class="gallery-img">
+                    <p>Torno CNC - Multiplic30S<br>Ø500 máx. (mm)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/centur50.png" alt="Torno CNC - Centur50" class="gallery-img">
+                    <p>Torno CNC - Centur50<br>Ø1000 máx. (mm)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/radial.png" alt="Furadeira Radial" class="gallery-img">
+                    <p>Furadeira Radial</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/tornomecanico.png" alt="Torno Mecânico" class="gallery-img">
+                    <p>Torno Mecânico</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/eletrofio.png" alt="Eletrofio" class="gallery-img">
+                    <p>Eletrofio</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pecas" class="fade-in">
+            <h2 class="section-title">PEÇAS</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="peças/peça10.jpg" alt="Peça 1" class="slider-img">
+                    <img src="peças/peça2.mp4" alt="Peça 2" class="slider-img">
+                    <img src="peças/peça12.jpg" alt="Peça 3" class="slider-img">
+                    <img src="peças/peça18.jpg" alt="Peça 4" class="slider-img">
+                    <img src="peças/peça16.jpg" alt="Peça 5" class="slider-img">
+                    <img src="peças/peça10.jpg" alt="Peça 6" class="slider-img">
+                    <img src="peças/peça1.jpg" alt="Peça 7" class="slider-img">
+                </div>
+                <a class="slider-prev">&#10094;</a>
+                <a class="slider-next">&#10095;</a>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2 class="section-title">CONTATO</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> comercial@agmservices.com.br</p>
+                <p><strong>Telefone:</strong> (21) 2671-2682</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1283679284813!2d-43.308959284545634!3d-22.798595285071045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x996b8275c6c2f7%3A0x7bdb8a44e3f6c0e!2sAvenida%20Pist%C3%B3ia%2C%2038%20-%20Jardim%20Gramacho%2C%20Duque%20de%20Caxias%20-%20RJ%2C%2025055-052%2C%20Brasil!5e0!3m2!1sen!2sus!4v1692643189465!5m2!1sen!2sus" 
+                width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="contact-address">
+                    AVENIDA PISTÓIA, 38 - PARTE COM A FRANCISCO PORTELA<br>
+                    JARDIM GRAMACHO, DUQUE DE CAXIAS - RJ<br>
+                    CEP 25055-052
+                </p>            
+            </div>      
+        </section>
+
+        <footer class="footer-style">
+            <p>&copy; <b>2024 AGM SERVICES USINAGEM E PRECISÃO. Todos os direitos reservados.</b></p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
