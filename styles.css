@@ -82,7 +82,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease, transform 0.3s ease;
-    position: relative;
+    position: center;
 }
 
 nav ul li a:hover {
