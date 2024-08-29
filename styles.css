@@ -69,14 +69,14 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center; /* Isso já está centralizando o menu */
+    align-items: center; /* Isso alinha verticalmente os itens dentro do menu */
     gap: 20px;
-    justify-content: center;
 }
 
 nav ul li {
-    position: center;
+    position: relative; /* Corrigi o 'center' aqui para 'relative' */
 }
-
 nav ul li a {
     color: white;
     text-decoration: none;
