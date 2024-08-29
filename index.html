@@ -4,55 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGM SERVICES USINAGEM E PRECISÃO</title>
-    <link href="https://gabrieloureiro80.github.io/style.css" rel="stylesheet"/>
+   <link href="https://gabrieloureiro80.github.io/style.css"
+rel="stylesheet"/>
     <style>
         header, footer {
             background-color: #1c3c6f;
             color: white;
-            padding: 1em;
         }
-
-        .container {
-            padding: 0 15px;
-        }
-
-        .logo img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav ul {
-            display: flex;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
-
         .section-title {
             margin: 0;
         }
-
         .slider-container {
             position: relative;
-            width: 100%;
-            overflow: hidden;
         }
-
         .slider-prev, .slider-next {
             position: absolute;
             top: 50%;
@@ -64,15 +28,12 @@
             cursor: pointer;
             padding: 0.5em;
         }
-
         .slider-prev {
             left: 10px;
         }
-
         .slider-next {
             right: 10px;
         }
-
         .modal {
             display: none;
             position: fixed;
@@ -82,16 +43,15 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.8);
         }
-
         .modal-content {
             margin: auto;
             display: block;
             width: 80%;
             max-width: 700px;
         }
-
         .close {
             position: absolute;
             top: 15px;
@@ -100,64 +60,6 @@
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
-        }
-
-        /* Imagens responsivas */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Layout flexível para telas menores */
-        @media (max-width: 768px) {
-            header {
-                text-align: center;
-            }
-
-            nav ul {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: block;
-                cursor: pointer;
-                font-size: 1.5em;
-                color: white;
-            }
-
-            .nav-active ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .gallery-item {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .slider-prev, .slider-next {
-                font-size: 1.5em;
-                padding: 0.5em;
-            }
-
-            .section-title {
-                font-size: 1.5em;
-            }
-
-            .service-list {
-                font-size: 0.9em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section-title {
-                font-size: 1.2em;
-            }
-
-            .service-list {
-                font-size: 0.8em;
-            }
         }
     </style>
 </head>
@@ -170,14 +72,13 @@
             <section id="tema">
                 <h1>AGM SERVICES USINAGEM E PRECISÃO</h1>
             </section>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <nav id="navbar">
+            <nav>
                 <ul>
                     <li><a href="#about">QUEM SOMOS</a></li>
                     <li><a href="#services">SERVIÇOS</a></li>
                     <li><a href="#maquinario">MAQUINÁRIO</a></li>
                     <li><a href="#pecas">PEÇAS</a></li>
-                    <li><a href="#contact">CONTATO</a></li>
+                    <li><a href="#contact">CONTATO</a></li>                    
                 </ul>
             </nav>
         </header>
@@ -275,7 +176,7 @@
             </div>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1283679284813!2d-43.308959284545634!3d-22.798595285071045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x996b8275c6c2f7%3A0x7bdb8a44e3f6c0e!2sAvenida%20Pist%C3%B3ia%2C%2038%20-%20Jardim%20Gramacho%2C%20Duque%20de%20Caxias%20-%20RJ%2C%2025055-052%2C%20Brasil!5e0!3m2!1sen!2sus!4v1692643189465!5m2!1sen!2sus" 
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <p class="contact-address">
                     AVENIDA PISTÓIA, 38 - PARTE COM A FRANCISCO PORTELA<br>
                     JARDIM GRAMACHO, DUQUE DE CAXIAS - RJ<br>
@@ -297,11 +198,5 @@
     </div>
 
     <script src="https://gabrieloureiro80.github.io/script.js"></script>
-    <script>
-        function toggleMenu() {
-            var navbar = document.getElementById("navbar");
-            navbar.classList.toggle("nav-active");
-        }
-    </script>
 </body>
 </html>
