@@ -1,4 +1,4 @@
-/* Animação para o título */
+/* Animações */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -10,9 +10,39 @@
     }
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mixins */
+@mixin button-style($background-color, $color) {
+    background-color: $background-color;
+    color: $color;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
 /* Estilo global */
 body {
-    font-family: 'Calibri Light', Calibri, Arial, sans-serif;
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     text-transform: none;
@@ -21,20 +51,31 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    text-align: center;
+    text-align: justify;
     background-color: #f4f4f4;
 }
 
-/* Estilo do cabeçalho */
-header {
+/* Cabeçalho e rodapé */
+header, .footer-style {
     width: 100%;
     background-color: #1c3c6f;
-    padding: 30px 0;
     color: white;
     text-align: center;
 }
 
-/* Estilo do título principal */
+header {
+    padding: 30px 0;
+}
+
+.footer-style {
+    border: 2px solid white;
+    padding: 10px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Título principal */
 #tema h1 {
     font-size: 40px;
     color: white;
@@ -43,9 +84,9 @@ header {
     text-align: center;
 }
 
-/* Estilo da navegação */
+/* Navegação */
 nav ul {
-    list-style-type: none;  
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -72,7 +113,6 @@ nav ul li a:hover {
     transform: translateY(-3px);
 }
 
-/* Efeito de sublinhado animado */
 nav ul li a::after {
     content: "";
     position: absolute;
@@ -89,37 +129,19 @@ nav ul li a:hover::after {
     transform: scaleX(1);
 }
 
-/* Estilo para as seções */
-section {
-    margin: 40px 0;
-}
-
-/* Estilo do cabeçalho e rodapé */
-.footer-style {
-    width: 100%;
-    border: 2px solid white;
-    padding: 10px 0; /* Margem menor */
-    background-color: #1c3c6f;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-    box-sizing: border-box; /* Garante que o padding não afete a largura total */
-    margin: 0; /* Remove qualquer margem que possa afetar a largura */
-}
-
-/* Estilo do container principal */
+/* Container principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Estilo do logo */
+/* Logo */
 .logo {
     margin-bottom: 10px;
 }
 
-/* Estilo para as imagens */
+/* Imagens */
 .image-container {
     display: flex;
     justify-content: center;
@@ -133,7 +155,7 @@ section {
     border-radius: 10px;
 }
 
-/* Estilo para a galeria de maquinário */
+/* Galeria de maquinário */
 #maquinario {
     padding: 20px;
 }
@@ -145,28 +167,25 @@ section {
     justify-content: center;
 }
 
-/* Estilo para cada item da galeria */
 .gallery-item {
-    flex: 1 1 calc(25% - 20px); /* Ajustado para 4 colunas */
-    max-width: calc(25% - 20px); /* Ajustado para 4 colunas */
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo dentro do item da galeria */
+    align-items: center;
 }
 
-/* Estilo para as imagens da galeria */
 .gallery-item img {
     width: 100%;
-    height: 150px; /* Altura reduzida para melhor visualização */
-    object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+    height: 150px;
+    object-fit: cover;
     border: 2px solid #ccc;
     border-radius: 10px;
-    display: block;
     margin-bottom: 10px;
-    cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que é clicável */
+    cursor: pointer;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -175,19 +194,18 @@ section {
     border-color: #f5b02b;
 }
 
-/* Estilo para o texto abaixo das imagens */
 .gallery-item p {
     font-size: 14px;
     margin: 0;
 }
 
-/* Estilo para o slider de imagens */
+/* Slider de imagens */
 .slider-container {
     position: relative;
-    max-width: 800px; /* Reduz a largura máxima do slider */
+    max-width: 800px;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px; /* Adiciona bordas arredondadas ao container do slider */
+    border-radius: 10px;
 }
 
 .slider {
@@ -197,15 +215,13 @@ section {
 
 .slider-img {
     flex: 0 0 100%;
-    height: 500px; /* Ajuste conforme necessário */
-    object-fit: cover; /* Ajusta a imagem para cobrir o container */
-    width: 100%; /* Garante que a imagem ocupe toda a largura do slider */
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
 }
 
-
 /* Botões de navegação do slider */
-.slider-prev,
-.slider-next {
+.slider-prev, .slider-next {
     position: absolute;
     top: 50%;
     width: auto;
@@ -219,7 +235,7 @@ section {
     cursor: pointer;
     border-radius: 3px;
     user-select: none;
-    z-index: 1000; /* Garante que os botões estejam sobre o slider */
+    z-index: 1000;
 }
 
 .slider-prev {
@@ -230,39 +246,52 @@ section {
     right: 10px;
 }
 
-/* Estilo para o contato */
+/* Contato */
 .contact-info {
     margin-bottom: 20px;
 }
 
-/* Estilo para a lista de serviços */
-#services h2 {
-    font-weight: lighter;
-    text-align: center;
+/* Lista de serviços */
+#services h2.section-title {
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif; /* Fonte atualizada */
+    font-size: 40px;
+    padding: 10px 0; /* Adiciona um pouco de espaçamento interno */
+    margin: 30px 0 20px; /* Adiciona margem superior e inferior, com mais espaço acima e abaixo */
+    text-align: left; /* Alinhamento à esquerda */
+    animation: slideIn 1s forwards; /* Animação atualizada */
+}
+
+#services {
+    text-align: left; /* Garante que todo o conteúdo dentro da seção de serviços esteja alinhado à esquerda */
 }
 
 .service-list {
     font-weight: lighter;
     columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
     column-gap: 30px;
     font-size: 18px;
-    text-align: left;
+    text-align: left; /* Alinhamento à esquerda para a lista de serviços */
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding-left: 0; /* Remove o padding padrão */
 }
 
 .service-list li {
-    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px; /* Espaçamento para o marcador personalizado */
 }
 
-/* Animação de fade-in para seções */
-.fade-in {
-    animation: fadeIn 1s ease-out forwards;
+.service-list li::before {
+    content: "-"; /* Adiciona um marcador personalizado */
+    position: absolute;
+    left: 0;
+    color: #1c3c6f; /* Cor do marcador */
+    font-size: 20px; /* Tamanho do marcador */
+    line-height: 1.5; /* Alinha o marcador verticalmente */
 }
 
-/* Estilos para o modal */
+/* Modal */
 .modal {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -298,23 +327,24 @@ section {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: #f5b02b;
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Estilo para foco de elementos interativos */
+/* Foco de elementos interativos */
 a:focus, button:focus {
     outline: 2px solid #f5b02b;
     outline-offset: 2px;
 }
 
+/* Indicadores do slider */
 .slider-indicators {
     text-align: center;
     margin-top: 15px;
 }
+
 .slider-indicators span {
     display: inline-block;
     width: 10px;
@@ -324,42 +354,32 @@ a:focus, button:focus {
     border-radius: 50%;
     cursor: pointer;
 }
+
 .slider-indicators span.active {
     background-color: #f5b02b;
 }
 
-/* Adicionando animações específicas */
+/* Animações específicas */
 .section-title {
-    margin: 0;
-    opacity: 0; /* Começa invisível para a animação */
-    transform: translateY(-20px); /* Começa deslocado para fora da tela */
+    margin: 20px 0; /* Adiciona margem superior e inferior */
+    padding: 10px 0; /* Adiciona padding superior e inferior */
+    opacity: 0;
+    transform: translateY(-20px);
     animation: slideIn 1s forwards;
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: left; /* Alinhamento à esquerda */
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Mapa */
+.map-container {
+    max-width: 100%; /* Ajuste a largura conforme necessário */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    text-align: center; /* Alinha o conteúdo dentro do contêiner ao centro */
 }
 
-#about p {
-    opacity: 0; /* Começa invisível para a animação */
-    animation: fadeInUp 1s forwards;
-    animation-delay: 1s; /* Atraso para aparecer depois do título */
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.map-container iframe {
+    width: 100%; /* Ajuste a largura do iframe se necessário */
+    height: 500px; /* Ajuste a altura conforme necessário */
+    border: 0;
 }
