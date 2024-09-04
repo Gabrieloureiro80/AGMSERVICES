@@ -202,7 +202,8 @@ nav ul li a:hover::after {
 /* Slider de imagens */
 .slider-container {
     position: relative;
-    max-width: 800px;
+    width: 1000px; /* Ajuste da largura */
+    height: 800px; /* Ajuste da altura */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -215,10 +216,11 @@ nav ul li a:hover::after {
 
 .slider-img {
     flex: 0 0 100%;
-    height: 500px;
+    width: 1000px; /* Ajuste da largura */
+    height: 800px; /* Ajuste da altura */
     object-fit: cover;
-    width: 100%;
 }
+
 
 /* Botões de navegação do slider */
 .slider-prev, .slider-next {
@@ -362,24 +364,33 @@ a:focus, button:focus {
 /* Animações específicas */
 .section-title {
     margin: 20px 0; /* Adiciona margem superior e inferior */
-    padding: 10px 0; /* Adiciona padding superior e inferior */
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideIn 1s forwards;
-    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    text-align: left; /* Alinhamento à esquerda */
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+    text-transform: none;
 }
 
-/* Mapa */
+/* Mapas */
 .map-container {
-    max-width: 100%; /* Ajuste a largura conforme necessário */
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    text-align: center; /* Alinha o conteúdo dentro do contêiner ao centro */
+    position: relative;
+    text-align: right;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Centraliza o mapa */
+    align-items: center; /* Centraliza verticalmente o mapa */
 }
 
-.map-container iframe {
-    width: 100%; /* Ajuste a largura do iframe se necessário */
-    height: 500px; /* Ajuste a altura conforme necessário */
+.map-responsive {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+}
+
+hr {
     border: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
 }
