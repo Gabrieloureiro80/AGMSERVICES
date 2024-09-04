@@ -221,7 +221,6 @@ nav ul li a:hover::after {
     object-fit: cover;
 }
 
-
 /* Botões de navegação do slider */
 .slider-prev, .slider-next {
     position: absolute;
@@ -249,8 +248,47 @@ nav ul li a:hover::after {
 }
 
 /* Contato */
+#contact {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact .section-title {
+    font-size: 40px;
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .contact-info {
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajuste a largura máxima do mapa */
+    margin: 0 auto 30px; /* Centraliza o mapa e adiciona margem inferior */
+}
+
+.map-container iframe {
+    width: 100%; /* Ajusta a largura do iframe para 100% do contêiner */
+    height: 400px; /* Ajusta a altura do iframe para uma visualização melhor */
+    border: 0;
+}
+
+.contact-address {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza o texto do endereço */
 }
 
 /* Lista de serviços */
@@ -306,6 +344,14 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
+/* Estilo para os títulos das seções */
+section h2 {
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: 30px 0; /* Margem para separar o título do conteúdo */
+    text-align: left; /* Ajuste o alinhamento conforme necessário */
+}
+
 .modal-content {
     margin: auto;
     display: block;
@@ -327,70 +373,12 @@ nav ul li a:hover::after {
     color: white;
     font-size: 35px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
     color: #f5b02b;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* Foco de elementos interativos */
-a:focus, button:focus {
-    outline: 2px solid #f5b02b;
-    outline-offset: 2px;
-}
-
-/* Indicadores do slider */
-.slider-indicators {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.slider-indicators span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.slider-indicators span.active {
-    background-color: #f5b02b;
-}
-
-/* Animações específicas */
-.section-title {
-    margin: 20px 0; /* Adiciona margem superior e inferior */
-    text-align: center;
-    animation: slideIn 1s ease-in-out;
-    text-transform: none;
-}
-
-/* Mapas */
-.map-container {
-    position: relative;
-    text-align: right;
-    height: 400px;
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center; /* Centraliza o mapa */
-    align-items: center; /* Centraliza verticalmente o mapa */
-}
-
-.map-responsive {
-    overflow: hidden;
-    background: none !important;
-    height: 100%;
-    width: 100%;
-}
-
-hr {
-    border: 0;
-    height: 2px;
-    background-color: #ccc;
-    margin: 20px 0;
 }
