@@ -1,3 +1,8 @@
+// Verifica se o site está em HTTP e redireciona para HTTPS
+if (window.location.protocol === 'http:') {
+    window.location.href = window.location.href.replace('http:', 'https:');
+}
+
 // Atualiza o link do menu ativo com base na rolagem da página
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
